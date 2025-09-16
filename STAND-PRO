@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa de Stands - [Nombre de tu empresa]</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ... (Tu CSS permanece igual, es muy bueno y responsivo) ... */
+  </style>
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav aria-label="Menú principal">
+    <div><strong>STAND PRO</strong></div>
+    <div>
+      <a href="#sobre-nosotros">Sobre Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Inicio -->
+  <header role="banner">
+    <h1>Transformamos tu marca en experiencias inolvidables</h1>
+    <p>Creamos stands únicos que atraen, impactan y venden.</p>
+    <a href="#contacto">Solicita tu presupuesto</a>
+  </header>
+
+  <main>
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros">
+      <h2>Nuestra pasión: hacer que tu marca destaque</h2>
+      <p>En <strong>STAND PRO</strong> diseñamos y construimos stands que no solo muestran tu marca, sino que crean experiencias memorables para tus visitantes. Nuestro equipo combina creatividad, tecnología y sostenibilidad para entregar soluciones innovadoras en cada proyecto.</p>
+      <div class="grid" aria-label="Características">
+        <div class="card">Diseño 100% personalizado</div>
+        <div class="card">Materiales sostenibles y ecoeficientes</div>
+        <div class="card">Montaje rápido y modular</div>
+        <div class="card">Integración tecnológica interactiva</div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+      <h2>Lo que podemos hacer por ti</h2>
+      <div class="grid">
+        <div class="card"><h3>Diseño de Stands Personalizados</h3><p>Desde la idea inicial hasta los detalles finales, creamos stands que reflejan la identidad de tu marca y atraen a tu público objetivo.</p></div>
+        <div class="card"><h3>Montaje y Desmontaje Rápido</h3><p>Nuestros stands están pensados para adaptarse a cualquier espacio y ser montados sin complicaciones, ahorrando tiempo y esfuerzo.</p></div>
+        <div class="card"><h3>Integración Tecnológica</h3><p>Incorporamos pantallas, realidad aumentada y elementos interactivos para que tu stand destaque y genere engagement real.</p></div>
+        <div class="card"><h3>Asesoría Integral</h3><p>Te acompañamos en todo el proceso, asegurando que tu inversión tenga un retorno tangible y que tu stand cumpla todos tus objetivos.</p></div>
+      </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portafolio">
+      <h2>Nuestros trabajos hablan por sí mismos</h2>
+      <div class="grid portfolio">
+        <img src="https://via.placeholder.com/400x300" alt="Stand para Marca A - Proyecto 1">
+        <img src="https://via.placeholder.com/400x300" alt="Stand para Marca B - Proyecto 2">
+        <img src="https://via.placeholder.com/400x300" alt="Stand para Marca C - Proyecto 3">
+        <img src="https://via.placeholder.com/400x300" alt="Stand para Marca D - Proyecto 4">
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="grid">
+        <div class="testimonial">“Gracias a STAND PRO, nuestro stand fue el centro de atención en la feria. ¡Impactante!” – Cliente X</div>
+        <div class="testimonial">“Su creatividad y profesionalidad nos ayudaron a destacar entre decenas de competidores. Totalmente recomendable.” – Cliente Y</div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Hablemos de tu próximo stand</h2>
+      <p>Estamos listos para ayudarte a crear un stand que marque la diferencia. Déjanos tus datos y nos pondremos en contacto contigo rápidamente.</p>
+      <form action="mailto:tuemail@empresa.com?subject=Contacto%20desde%20la%20web%20StandPro" method="post" enctype="text/plain">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- WhatsApp flotante -->
+  <div class="whatsapp">
+    <a href="https://wa.me/3460000000" target="_blank" aria-label="Habla por WhatsApp">WhatsApp</a>
+  </div>
+
+  <footer>
+    &copy; 2025 STAND PRO. Todos los derechos reservados.
+  </footer>
+
+  <!-- Animación al hacer scroll con IntersectionObserver -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {threshold: 0.1});
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
